@@ -562,7 +562,11 @@
 
   /* .care__content */
 
-  &__content {}
+  &__content {
+    @media (max-width: em(769)) {
+      order: 2;
+    }
+  }
 
   /* .care__text-main */
 
@@ -652,7 +656,7 @@
     }
 
     @media (max-width: em(769)) {
-      order: -1;
+      order: 1;
     }
 
     ;
