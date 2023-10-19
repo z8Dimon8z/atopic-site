@@ -533,7 +533,7 @@
 // ======================================================
 
 .care {
-  @include adaptiveValue("padding-top", 170, 50);
+  @include adaptiveValue("padding-top", 170, 120);
   /* .care__container */
 
   &__container {}
