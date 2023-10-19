@@ -1,3 +1,134 @@
 //====================================================================================================
+.title {
+  color: $textColor;
+  font-family: "PTSans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 7px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer {
+
+  /* .footer__top */
+
+  &__top {
+    background-color: #EEF4F9;
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+
+  /* .footer__container */
+
+  &__container {}
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @media (max-width: em(644)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(404)){
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  /* .footer__column */
+
+  &__column {}
+
+  /* .footer__column-title */
+
+  &__column-title {}
+
+  /* .footer__column-list */
+
+  &__column-list {}
+
+  /* .footer__column-item */
+
+  &__column-item {
+    color: #808285;
+    font-family: "PTSans";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__column-item_blue {
+    color: $textColor;
+    font-family: "PTSans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  /* .footer__column-link */
+
+  &__column-link {}
+
+  /* .footer__down */
+
+  &__down {
+    background-color: #D3E6F5;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  /* .footer__down-wrap */
+
+  &__down-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #6E7685;
+    font-family: "Rubik";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  /* .footer__down-logo */
+
+  &__down-logo {}
+
+  /* .footer__down-img */
+
+  &__down-img {}
+
+  /* .footer__down-content */
+
+  &__down-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  /* .footer__down-years */
+
+  &__down-years {}
+
+  /* .footer__down-adress */
+
+  &__down-adress {}
+
+  /* .footer__down-link */
+
+  &__down-link {}
+}
+
 
 //====================================================================================================

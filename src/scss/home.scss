@@ -1,3 +1,848 @@
 //====================================================================================================
+.main {
+  @include adaptiveValue("padding-top", 120, 15);
+  /* .main__title */
 
-//====================================================================================================
+  &__title {
+    font-family: "Myriad";
+    font-weight: 700;
+    color: $akcentColor;
+    text-align: center;
+    @include adaptiveValue("font-size", 400, 90);
+    line-height: 0;
+    position: relative;
+    @include adaptiveValue("padding-top", 120, 90);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 30px;
+      right: 0;
+      background: url('@img/r.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  /* .main__content */
+
+  &__content {
+    position: relative;
+    @include adaptiveValue("padding-top", 250, 28);
+  }
+
+  /* .main__block */
+
+  &__block {
+    @include adaptiveValue("max-width", 584, 100);
+
+    @media (max-width: em(640)) {
+      padding-top: 270px;
+      max-width: 100%;
+    }
+  }
+
+  /* .main__text-primary */
+
+  &__text-primary {
+    font-family: "SF";
+    font-size: 28px;
+    font-weight: 600;
+    color: $textColor;
+    margin-bottom: 17px;
+
+    span {
+      color: $akcentColor;
+    }
+  }
+
+  /* .main__text */
+
+  &__text {}
+
+  /* .main__img */
+
+  &__img {
+    position: absolute;
+    top: -15px;
+    @include adaptiveValue("top", -15, 50);
+    right: 20px;
+    @include adaptiveValue("width", 559, 255);
+    @include adaptiveValue("height", 559, 255);
+
+    @media (max-width: em(640)) {
+      top: 20%;
+      right: 50%;
+      transform: translate(42%, -20%);
+    }
+  }
+}
+
+// =============================================================
+
+.advantages {
+  @include adaptiveValue("padding-top", 150, 20);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptiveValue("top", 30, -100);
+    right: 0;
+    height: 625px;
+    width: 100%;
+    z-index: -1;
+    background: url('@img/bg.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-size: contain;
+
+  }
+
+  /* .advantages__container */
+
+  &__container {}
+
+  /* .advantages__block */
+
+  &__block {
+    text-align: center;
+  }
+
+  /* .advantages__icon */
+
+  &__icon {
+    @include adaptiveValue("height", 40, 18);
+    @include adaptiveValue("width", 40, 18);
+
+    @media (max-width:$mobileSmall) {
+      display: none;
+    }
+  }
+
+  /* .advantages__content */
+
+  &__content {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 125, 0);
+
+    @media (max-width: em(870)) {
+      column-gap: 10px;
+    }
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+      column-gap: 0;
+    }
+  }
+
+  /* .advantages__img */
+
+  &__img {
+    width: 445px;
+    height: 400px;
+    @include adaptiveValue("width", 445, 257);
+    @include adaptiveValue("height", 400, 231);
+  }
+
+  /* .advantages__content-text */
+
+  &__content-text {
+    @include adaptiveValue("font-size", 28, 18);
+  }
+
+  /* .advantages__text */
+
+  &__text {
+    color: $textColor;
+    margin-bottom: 17px;
+
+    span {
+      color: $akcentColor;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-span {
+    font-family: "Myriad";
+    font-weight: 600;
+    @include adaptiveValue("font-size", 50, 30);
+    color: $akcentColor;
+    line-height: 125%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 12px;
+      right: -6px;
+      background: url('@img/r.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  /* .advantages__appeal */
+
+  &__appeal {
+    text-align: center;
+    font-weight: 700;
+    color: $akcentColor;
+    font-size: 28px;
+
+    @media (max-width: em(1036)) {
+      opacity: 0;
+    }
+  }
+}
+
+// =============================================================
+.training {
+
+  /* .training__container */
+  @include adaptiveValue("padding-top", 100, 80);
+
+  &__container {}
+
+  /* .training__title */
+
+  &__title {
+    text-align: center;
+    color: #DAEAF8;
+    @include adaptiveValue("font-size", 210, 46);
+    font-weight: 700;
+    @include adaptiveValue("line-height", 30, 10);
+  }
+
+  /* .training__content */
+
+  &__content {
+    display: flex;
+    column-gap: 26px;
+    @include adaptiveValue("padding-top", 67, 5);
+
+    @media (max-width: em(1024)) {
+      column-gap: 0;
+      flex-direction: column;
+      @include adaptiveValue("row-gap", 35, 27);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* .training__block */
+
+  &__block {}
+
+  /* .training__text */
+
+  &__text {
+    @include adaptiveValue("font-size", 28, 18);
+    font-weight: 600;
+    line-height: 125%;
+    color: $textColor;
+    margin-bottom: 17px;
+
+    span {
+      color: $akcentColor;
+    }
+  }
+
+  &__text-span {
+    font-family: "Myriad";
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 600;
+    color: $akcentColor;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 10px;
+      right: -6px;
+      background: url('@img/r.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__text-blue {
+    font-family: "SF";
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 700;
+    color: $textColor !important;
+  }
+
+  &__text-gray {
+    color: #6E7685;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  /* .training__link */
+
+  &__link {
+    color: $akcentColor;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: underline !important;
+  }
+
+  /* .training__img */
+
+  &__img {
+    @include adaptiveValue("height", 358, 135);
+    @include adaptiveValue("width", 617, 233);
+
+    @media (max-width: em(1024)) {
+      order: -1;
+    }
+  }
+}
+
+// =============================================================
+.support {
+  @include adaptiveValue("padding-top", 225, 50);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptiveValue("top", 30, -100);
+    right: 0;
+    height: 749px;
+    width: 100%;
+    z-index: -1;
+    background: url('@img/bg-2.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-size: contain;
+
+  }
+
+  /* .support__container */
+
+  &__container {}
+
+  /* .support__title */
+
+  &__title {
+    text-align: center;
+    color: #fff;
+    @include adaptiveValue("font-size", 168, 38);
+    font-weight: 700;
+    @include adaptiveValue("line-height", 30, 10);
+  }
+
+  /* .support__wrap */
+
+  &__wrap {
+    display: flex;
+    padding-top: 25px;
+    @include adaptiveValue("column-gap", 181, 10);
+
+    @media (max-width: em(1226)) {
+      column-gap: 40px;
+    }
+
+    @media (max-width: em(675)) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0;
+    }
+  }
+
+  /* .support__images */
+
+  &__images {
+    display: flex;
+
+    @media (max-width: em(1024)) {
+      order: 1;
+    }
+
+    @media (max-width: em(675)) {
+      order: 0;
+    }
+  }
+
+  /* .support__img-one */
+
+  &__img-one {
+    position: relative;
+    z-index: 2;
+    align-self: flex-end;
+    margin-right: -100px;
+    padding-bottom: 20px;
+    @include adaptiveValue("width", 183, 90, 1440, 375, 1);
+    @include adaptiveValue("height", 249, 122, 1440, 375, 1);
+
+    @media (max-width: em(675)) {
+      margin-right: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  /* .support__img-two */
+
+  &__img-two {
+    position: relative;
+    z-index: 1;
+    @include adaptiveValue("width", 208, 102, 1440, 375, 1);
+    @include adaptiveValue("height", 441, 217, 1440, 375, 1);
+
+    @media (max-width: em(675)) {
+      display: none;
+    }
+  }
+
+  /* .support__text-main */
+
+  &__text-main {
+    @include adaptiveValue("font-size", 28, 18);
+    font-weight: 600;
+    line-height: 125%;
+    color: $textColor;
+    margin-bottom: 17px;
+
+    span {
+      color: $akcentColor;
+    }
+  }
+
+  /* .support__text-main-span */
+
+  &__text-main-span {
+    font-family: "Myriad";
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 600;
+    color: $akcentColor;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 10px;
+      right: -6px;
+      background: url('@img/r.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  /* .support__text-main-blue */
+
+  &__text-main-blue {
+    font-family: "SF";
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 700;
+    color: $textColor !important;
+  }
+
+  /* .support__content */
+
+  &__content {
+    padding-top: 30px;
+
+    @media (max-width: em(675)) {
+      padding-top: 0;
+    }
+  }
+
+  /* .support__text */
+
+  &__text {
+    color: #6E7685;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 17px;
+  }
+
+  /* .support__link */
+
+  &__link {
+    color: $akcentColor;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: underline !important;
+    display: block;
+    margin-bottom: 17px;
+  }
+
+  /* .support__content-link-wrap */
+
+  &__content-link-wrap {
+    display: flex;
+    gap: 30px;
+    @include adaptiveValue("gap", 30, 15);
+  }
+
+  /* .support__contet-link */
+
+  &__contet-link {}
+
+  /* .support__content-link-img */
+
+  &__content-link-img {
+    @include adaptiveValue("width", 156, 108);
+    @include adaptiveValue("height", 51, 38);
+  }
+}
+
+// ======================================================
+
+.care {
+  @include adaptiveValue("padding-top", 170, 50);
+  /* .care__container */
+
+  &__container {}
+
+  /* .care__title */
+
+  &__title {
+    text-align: center;
+    color: #DAEAF8;
+    @include adaptiveValue("font-size", 300, 88);
+    font-weight: 700;
+    @include adaptiveValue("line-height", 30, 1);
+  }
+
+  /* .care__wrap */
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: em(769)) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  /* .care__content */
+
+  &__content {}
+
+  /* .care__text-main */
+
+  &__text-main {
+    @include adaptiveValue("font-size", 28, 18);
+    font-weight: 600;
+    line-height: 125%;
+    color: $textColor;
+    margin-bottom: 17px;
+
+    span {
+      color: $akcentColor;
+    }
+  }
+
+  /* .care__text-main-big */
+
+  &__text-main-big {
+    font-family: "SF";
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 600;
+    color: $textColor !important;
+  }
+
+  /* .care__text-main-red */
+
+  &__text-main-red {
+    font-family: "Myriad";
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 600;
+    color: $akcentColor;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 10px;
+      right: -6px;
+      background: url('@img/r.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  /* .care__text */
+
+  &__text {
+    color: #6E7685;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 17px;
+  }
+
+  /* .care__link */
+
+  &__link {
+    color: $akcentColor;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: underline !important;
+  }
+
+  /* .care__img */
+
+  &__img {
+    @include adaptiveValue("padding-right", 100, 0);
+    @include adaptiveValue("width", 418, 191);
+    @include adaptiveValue("height", 418, 191);
+
+    @media (max-width: em(1076)) {
+      padding-right: 30px;
+    }
+
+    @media (max-width: em(1020)) {
+      padding-right: 0;
+    }
+
+    @media (max-width: em(769)) {
+      order: -1;
+    }
+
+    ;
+  }
+}
+
+// ==============================================================
+
+.moms {
+  @include adaptiveValue("padding-top", 100, 120);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptiveValue("top", 1, 0);
+    right: 0;
+    height: 749px;
+    width: 100%;
+    z-index: -1;
+    background: url('@img/bg-2.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-size: contain;
+    /* .moms__container */
+  }
+
+  &__container {}
+
+  /* .moms__title */
+
+  &__title {
+    text-align: center;
+    color: #fff;
+    @include adaptiveValue("font-size", 134, 31);
+    font-weight: 700;
+    line-height: 125%;
+    position: relative;
+    margin-bottom: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 30px;
+      right: 20px;
+      background: url('@img/r-white.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  /* .moms__slider */
+
+  &__slick {
+    margin-bottom: 30px;
+  }
+
+  /* .moms__wrapper */
+
+  &__wrapper {
+    display: flex;
+    gap: 15px;
+  }
+
+  /* .moms__slide */
+
+  &__slide {
+    @include adaptiveValue("max-width", 554, 258);
+    @include adaptiveValue("height", 300, 140);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 43px;
+      height: 50px;
+      top: 50%;
+      left: 50%;
+      background-image: url('@img/play.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      transition-property: box-shadow, width, height;
+      transition-duration: 0.5s;
+      z-index: 10;
+    }
+
+    &:hover::before {
+      width: 65px;
+      height: 75px;
+    }
+  }
+
+  /* .moms__img */
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* .moms__content */
+
+  &__content {
+    text-align: center;
+    margin-bottom: 65px;
+    @include adaptiveValue("margin-bottom", 65, 20);
+  }
+
+  /* .moms__main-text */
+
+  &__main-text {
+    color: $textColor;
+    font-family: "SF";
+    @include adaptiveValue("font-size", 42, 30);
+    font-weight: 600;
+    line-height: 125%;
+  }
+
+  &__main-text-red {
+    color: $akcentColor;
+    font-family: "Myriad";
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 10px;
+      right: 180px;
+      background: url('@img/r.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  /* .moms__link */
+
+  &__link {
+    display: block;
+    color: $akcentColor;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: underline !important;
+    margin-bottom: 10px;
+  }
+
+  /* .moms__text */
+
+  &__text {
+    color: #6E7685;
+    font-family: "PTSans";
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.moms-shop {
+  @include adaptiveValue("margin-bottom",100 , 70);
+  /* .moms-shop__wrapper */
+
+  &__wrapper {}
+
+  /* .moms-shop__slide */
+
+  &__slide {}
+
+  /* .moms-shop__img */
+
+  &__img {
+    height: 112px;
+    @include adaptiveValue("width", 230, 128);
+    @include adaptiveValue("height", 112, 66);
+    object-fit: contain;
+  }
+}

@@ -1,19 +1,195 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-      <svg class="button-icon">
-        <use xlink:href="img/icons/icons.svg#svg-vk"></use>
-      </svg>
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		<!-- @@include('html/_popup.htm',{}) -->
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="main">
+        <div class="main__container">
+          <h1 class="main__title">atopic</h1>
+          <div class="main__content">
+            <div class="main__block">
+              <p class="main__text-primary"><span>Улучшает</span> состояние кожи и самочувствие при атопическом
+                дерматите</p>
+              <p class="main__text">Мы будем рядом, помогая и постоянно поддерживая Вас.</p>
+            </div>
+            <img class="main__img" src="@img/main-cream.png" alt="Крема">
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__container">
+          <div class="advantages__block">
+            <svg class="advantages__icon">
+              <use xlink:href="img/icons/icons.svg#svg-arrow-down"></use>
+            </svg>
+          </div>
+          <div class="advantages__content">
+            <img class="advantages__img" src="@img/advantages.png" alt="Картинка приимуществ">
+            <div class="advantages__content-text">
+              <p class="advantages__text"><span class="advantages__text-span">atopic</span><br>
+                это система полноценного <span>обучения</span>, постоянной <span>поддержки</span> и обеспечения
+                правильного <span>ухода</span> за кожей.</p>
+              <p class="advantages__text">Применение ее на практике позволяет максимально улучшить качество жизни при
+                атопическом дерматите</p>
+            </div>
+          </div>
+          <p class="advantages__appeal">Приступим?</p>
+        </div>
+      </section>
+
+      <section class="training">
+        <div class="training__container">
+          <h2 class="training__title">ОБУЧЕНИЕ</h2>
+          <div class="training__content">
+            <div class="training__block">
+              <p class="training__text"> <span class="training__text-span">atopic</span> <span
+                  class="training__text-blue">school</span><br><span>Узнайте,</span> как улучшить самочувствие вашего
+                ребенка при атопическом дерматите</p>
+              <p class="training__text training__text-gray">Бесплатная онлайн школа AtopicSchool для атопиков и их
+                родителей поможет Вам во всем разобраться, следовать правильному плану действий и не переживать.</p>
+
+              <a class="training__link" href="#">Зарегистрироваться в AtopicSchool.ru</a>
+            </div>
+            <img class="training__img" src="@img/mac-book-pro.png" alt="Картинка ноутбука">
+          </div>
+        </div>
+      </section>
+
+      <section class="support">
+        <div class="support__container">
+          <h2 class="support__title">ПОДДЕРЖКА</h2>
+          <div class="support__wrap">
+            <div class="support__images">
+              <img class="support__img-one" src="@img/robot-img.png" alt="Картинка робота">
+              <img class="support__img-two" src="@img/telefone-img.png" alt="Картинка телефона">
+            </div>
+            <div class="support__content">
+              <p class="support__text-main"><span class="support__text-main-span">atopic</span> <span
+                  class="support__text-main-blue">app</span>
+                <br>
+                <span>Подключите</span>
+                себе персонального умного помощника, оцените состояние сегодня, следуйте рекомендациям врача
+                и наблюдайте за улучшениями</p>
+              <div class="support__content-wrapp">
+                <p class="support__text">Бесплатное мобильное приложение Atopic App на основе Искусственного Интеллекта
+                  для атопиков и их родителей – всегда будет рядом и поможет сделать все необходимое для улучшения
+                  самочувствия и состояния кожи.</p>
+
+                <a class="support__link" href="#">Установить приложение Atopic App</a>
+
+                <div class="support__content-link-wrap">
+                  <a class="support__contet-link" href="#">
+                    <img class="support__content-link-img" src="@img/app-store-img.png"
+                      alt="картинка ссылка на приложение app store">
+                  </a>
+                  <a class="support__contet-link" href="#">
+                    <img class="support__content-link-img" src="@img/google-play-img.png"
+                      alt="картинка ссылка на приложение android">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="care">
+        <div class="care__container">
+          <h2 class="care__title">УХОД</h2>
+          <div class="care__wrap">
+            <div class="care__content">
+              <p class="care__text-main"> <span class="care__text-main-big">серия</span> <span
+                  class="care__text-main-red">atopic</span> <br> <span>Ухаживайте за кожей</span> правильно</p>
+              <p class="care__text">Специальные средства atopic® обеспечат полноценный ежедневный уход за кожей при
+                атопическом дерматите: улучшат самочувствие, помогут продлить ремиссию и предупредить обострение</p>
+              <a class="care__link" href="#">Купить средства atopic</a>
+            </div>
+            <img class="care__img" src="@img/cream.png" alt="Картинка кремов">
+          </div>
+        </div>
+      </section>
+
+      <section class="moms">
+        <div class="moms__container">
+          <h2 class="moms__title">мамы про atopic</h2>
+          <div class="moms__slick slick">
+
+            <div class="moms__slide slick__slide">
+              <a data-fancybox href="https://youtu.be/G3n8KAkLXWc?si=Q4MzR2epad6vL3SM">
+                <img class="moms__img" src="@img/slider/1.jpg" alt="Картинка мамочек и детей">
+              </a>
+            </div>
+
+            <div class="moms__slide slick__slide">
+              <a data-fancybox href="https://youtu.be/G3n8KAkLXWc?si=Q4MzR2epad6vL3SM">
+                <img class="moms__img" src="@img/slider/2.jpg" alt="Картинка мамочек и детей">
+              </a>
+            </div>
+
+            <div class="moms__slide slick__slide">
+              <a data-fancybox href="https://youtu.be/G3n8KAkLXWc?si=Q4MzR2epad6vL3SM">
+                <img class="moms__img" src="@img/slider/3.jpg" alt="Картинка мамочек и детей">
+              </a>
+            </div>
+
+            <div class="moms__slide slick__slide">
+              <a data-fancybox href="https://youtu.be/G3n8KAkLXWc?si=Q4MzR2epad6vL3SM">
+                <img class="moms__img" src="@img/slider/4.jpg" alt="Картинка мамочек и детей">
+              </a>
+            </div>
+
+          </div>
+          <div class="moms__content">
+            <p class="moms__main-text"> <span class="moms__main-text-red">atopic улучшает</span> состояние кожи и
+              самочувствиепри атопическом дерматите</p>
+            <a class="moms__link" href="#">Больше информации</a>
+            <p class="moms__text">Вы можете приобрести продукты серии atopic® в одной из перечисленной ниже аптек:</p>
+          </div>
+          <div class="moms__slider moms-shop">
+            <div class="moms-shop__wrapper shop-slider">
+              <div class="moms-shop__slide">
+                <img class="moms-shop__img" src="@img/slider/shop/1.png" alt="картинки магазинов">
+              </div>
+
+              <div class="moms-shop__slide">
+                <img class="moms-shop__img" src="@img/slider/shop/2.png" alt="картинки магазинов">
+              </div>
+
+              <div class="moms-shop__slide">
+                <img class="moms-shop__img" src="@img/slider/shop/3.png" alt="картинки магазинов">
+              </div>
+
+              <div class="moms-shop__slide">
+                <img class="moms-shop__img" src="@img/slider/shop/4.png" alt="картинки магазинов">
+              </div>
+
+              <div class="moms-shop__slide">
+                <img class="moms-shop__img" src="@img/slider/shop/5.png" alt="картинки магазинов">
+              </div>
+
+              <div class="moms-shop__slide">
+                <img class="moms-shop__img" src="@img/slider/shop/6.png" alt="картинки магазинов">
+              </div>
+
+              <div class="moms-shop__slide">
+                <img class="moms-shop__img" src="@img/slider/shop/7.png" alt="картинки магазинов">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
 </html>
